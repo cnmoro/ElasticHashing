@@ -4,7 +4,7 @@ build-backend = "maturin"
 
 [project]
 name = "rb_elastic_hash"
-version = "1.0.0"
+version = "1.0.1"
 description = "A Rust-based implementation of Elastic Hashing (arXiv:2501.02305v2)"
 authors = [
     {name = "Carlo Moro", email = "cnmoro@gmail.com"},

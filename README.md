@@ -83,7 +83,7 @@ In tests with **1,000,000 items** at **95% Load Factor**:
 Elastic Hashing divides the table into geometrically decreasing subarrays ($A_0, A_1, \dots$). 
 
 1.  **Greedy Insert:** It tries to insert into array $A_i$.
-2.  **Elastic Skip:** If $A_i$ becomes too full (based on a calculated threshold $f(\epsilon)$), the algorithm "skips" $A_i$ and attempts to insert into the next, smaller array $A_{i+1}$.
+2.  **Elastic Skip:** If $A_i$ becomes too full (based on a calculated threshold f(ε)), the algorithm "skips" $A_i$ and attempts to insert into the next, smaller array $A_{i+1}$.
 3.  **Backpressure:** If deeper arrays fill up, they force previous arrays to accept more elements, balancing the load perfectly across the structure.
 
 This approach overcomes the "Coupon Collector Problem" that typically destroys performance in high-load open-addressing tables.
