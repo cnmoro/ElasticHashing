@@ -21,21 +21,27 @@ pip install maturin
 maturin develop --release
 ```
 
+### From pypi
+
+```bash
+pip install rb-elastic-hash
+```
+
 ## Usage
 
 ```python
-import elastic_hash
+import rb_elastic_hash
 
 # Easy way: Specify how many items you want to store
 # This will automatically size the table for 90% load factor (default)
-table = elastic_hash.ElasticTable.for_items(1_000_000)
+table = rb_elastic_hash.ElasticTable.for_items(1_000_000)
 
 # Want higher space efficiency? Increase the load factor
-table = elastic_hash.ElasticTable.for_items(1_000_000, load_factor=0.95)
+table = rb_elastic_hash.ElasticTable.for_items(1_000_000, load_factor=0.95)
 
 # Advanced: Create with explicit capacity and delta parameter
 # Delta 0.05 implies a target load factor of 95%
-table = elastic_hash.ElasticTable(1_000_000, delta=0.05)
+table = rb_elastic_hash.ElasticTable(1_000_000, delta=0.05)
 
 # Insert items
 # Returns the number of probes used for the insertion

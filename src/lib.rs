@@ -261,7 +261,7 @@ impl ElasticTable {
 }
 
 #[pymodule]
-fn elastic_hash(m: &Bound<'_, PyModule>) -> PyResult<()> {
+fn rb_elastic_hash(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_class::<ElasticTable>()?;
     Ok(())
 }

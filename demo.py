@@ -1,4 +1,4 @@
-import elastic_hash
+import rb_elastic_hash
 import random
 import statistics
 
@@ -6,7 +6,7 @@ N = 1_000_000
 DELTA = 0.05 
 
 print(f"--- Benchmarking Elastic Hash (Size: {N}, Target Load: 95%) ---")
-table = elastic_hash.ElasticTable(N, DELTA)
+table = rb_elastic_hash.ElasticTable(N, DELTA)
 keys = list(range(int(N * (1 - DELTA))))
 random.shuffle(keys)
 
