@@ -1,0 +1,28 @@
+[build-system]
+requires = ["maturin>=1.4,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "elastic_hash"
+version = "1.0.0"
+description = "A Rust-based implementation of Elastic Hashing (arXiv:2501.02305v2)"
+authors = [
+    {name = "Carlo Moro", email = "cnmoro@gmail.com"},
+]
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["hash-table", "rust", "data-structures", "open-addressing", "algorithm"]
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Programming Language :: Python :: 3",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+
+[tool.maturin]
+module-name = "elastic_hash"
+features = ["pyo3/extension-module"]
